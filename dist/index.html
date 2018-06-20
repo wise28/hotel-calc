@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="UTF-8">
+    <title>Hotels</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 check">
+            <h2 class="check__title">Номер "Бизнес" (от 2100 рублей в сутки)</h2>
+            <p class="check__text">Номер с одной увеличенной кроватью</p>
+            <label for="people" class="check__score">Выберите количество гостей</label>
+            <div class="counter">
+                <input type="text" id="people" class="check-people fieldCount" name="people" data-min="1" value="1 человек"/>
+                <div class="check__button-group">
+                <button class="check__button-top inc" value=""></button>
+                <button class="check__button-bottom dec" value=""></button>
+                </div>
+            </div>
+            <div class="line"></div>
+            <h3 class="check-item__header">Бизнес-ланч и ужин</h3>
+            <div class="check-item__param">
+                <label for="lunch"><strong>Бизнес-ланч </strong>Количество</label>
+                <input type="number" name="lunch" id="lunch" value="2" class="check-item__lunch" />
+                <span class="check-item__cost"><strong>500 рублей</strong></span>
+            </div>
+            <div>
+                <label for="dinner"><strong>Ужин </strong>Количество</label>
+                <input type="number" name="dinner" id="dinner" value="1" class="check-item__dinner">
+                <span class="check-item__cost"><strong>450 рублей</strong></span>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div class="img"></div>
+        </div>
+        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 transfer">
+            <h3 class="check-item__header">Трансфер</h3>
+            <p class="transfer__text">Выберите подходящий вариант трансфера</p>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 transfer__form">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 transfer__form-right">
+                <p class="transfer__form-time-header"><strong>c 8.00 до 18.00</strong></p>
+                <div class="transfer__form-right-item"><input type="radio" name="way" value="no-request_am">Не требуется</div>
+                <div class="transfer__form-right-item"><input type="radio" name="way" value="one_way_am">В одну сторону (350 руб.)</div>
+                <div class="transfer__form-right-item"><input type="radio" name="way" value="roundtrip_am">В обе стороны (700 руб.)</div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 transfer__form-left">
+                <p class="transfer__form-time-header"><strong>c 18.00 до 8.00</strong></p>
+                <div class="transfer__form-right-item"><input type="radio" name="way-return" value="no-request_pm">Не требуется</div>
+                <div class="transfer__form-right-item"><input type="radio" name="way-return" value="one_way_pm">В одну сторону (500 руб.)</div>
+                <div class="transfer__form-right-item"><input type="radio" name="way-return" value="roundtrip_pm">В обе стороны (1000 руб.)</div>
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 housing">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 early-housing">
+                <h3 class="check-item__header">Ранний заезд</h3>
+                <p class="transfer__text">Выберите время раннего заезда</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 late-housing">
+                <h3 class="check-item__header">Поздний заезд</h3>
+                <p class="transfer__text">Выберите время позднего заезда</p>
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 transfer__form">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 transfer__form-right">
+                <div class="transfer__form-right-item"><input type="radio" name="time-early" value="no-request-early_am">Не требуется</div>
+                <div class="transfer__form-right-item"><input type="radio" name="time-early" value="early-time_am"><span class="time">c 00.00 до 06.00</span>100% от стоимости</div>
+                <div class="transfer__form-right-item"><input type="radio" name="time-early" value="time_am"><span class="time">c 06.00 до 12.00</span>50% от стоимости</div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 transfer__form-left">
+                <div class="transfer__form-right-item"><input type="radio" name="time-late" value="no-request-late_pm">Не требуется</div>
+                <div class="transfer__form-right-item"><input type="radio" name="time-late" value="time_pm"><span class="time">c 12.00 до 18.00</span>50% от стоимости</div>
+                <div class="transfer__form-right-item"><input type="radio" name="time-late" value="late-time_pm"><span class="time">c 18.00 до 00.00</span>100% от стоимости</div>
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 total-info">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 total-info__header text-uppercase">Бизнес</div>
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 total-info__price">
+                <span class="total-info__price-number">2100<span class="glyphicon glyphicon-ruble"></span></span>
+                <p class="text-uppercase total-info__price-text">цена</p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 total-info__period">
+                <span class="total-info__period-number">1</span>
+                <p class="text-uppercase total-info__period-text">ночей</p>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 total-info__cost">
+                <span class="total-info__cost-number">2100<span class="glyphicon glyphicon-ruble"></span></span>
+                <p class="total-info__cost-content"><span id="percent">-5%</span>=<span id="summ">1995<span class="glyphicon glyphicon-ruble total-info__cost-summ-icon"></span></span>**</p>
+                <p class="text-uppercase total-info__cost-text">итого</p>
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+            <span class="low-price-text">** Скидка на бронирование распространяется только при оплате на сайте.</span>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+            <div class="line-bottom"></div>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 submit-wrapper">
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 submit-text-wrapper">
+                <strong>Нужна помощь?</strong>
+                <a href="#" class="submit-text">Нажмите здесь, чтобы мы вам перезвонили.</a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 submit-button-wrapper">
+                <input type="submit" value="Далее" class="submit-button"/>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="js/libs.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
