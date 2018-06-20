@@ -1,0 +1,2 @@
+# hotel-calc
+test task 
